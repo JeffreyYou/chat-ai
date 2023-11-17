@@ -78,7 +78,7 @@ const ChatComponent: React.FC = () => {
           <Content style={{ margin: "0 16px" }}>
             <CharacterDemonstration />
             <MessageItem/>
-            {/* <ChatRouter/> */}
+            {/* <ChatRouter/>  */}
           </Content>
 
           <Footer>
