@@ -1,12 +1,27 @@
 import React from 'react'
-import styles from './dialog-message-item.module.scss'
+import { Avatar } from 'antd';
+
 import { userChatStore } from '../../store/chat-store'
+import { ChatWrapper ,SystemContainer, UserContainer, MessageHeader } from './style';
 const MessageItem: React.FC = () => {
     const chatStore = userChatStore();
     const currentSession = chatStore.currentSession();
     const messages = currentSession.messages
   return (
-    <>
+    <ChatWrapper>
+    <SystemContainer >
+        <MessageHeader>
+            <Avatar shape="square" src={messages[0].avatar} />
+        </MessageHeader>
+        {messages.map( (message, index) => {
+                            return <div>{message.content}</div>
+                        })}
+    </SystemContainer>
+    <UserContainer>
+        {messages.map( (message, index) => {
+                            return <div>{message.content}</div>
+                        })}0
+    </UserContainer>
       <div
             // className={
             //     isUser ? styles["chat-message-user"] : styles["chat-message"]
@@ -30,14 +45,11 @@ const MessageItem: React.FC = () => {
                     </div>
                 </div>
                 <div >
-                    {messages.map( (message, index) => {
-                        return <div>{message.content}</div>
-                    })}
                 </div>
                 {/* <div className={styles['date']}>{date}</div> */}
             </div>
         </div>
-    </>
+    </ChatWrapper>
   )
 }
 

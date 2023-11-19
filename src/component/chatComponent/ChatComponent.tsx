@@ -76,7 +76,7 @@ const ChatComponent: React.FC = () => {
           </Header>
 
           <Content style={{ margin: "0 16px" }}>
-            <CharacterDemonstration />
+            {/* <CharacterDemonstration /> */}
             <MessageItem/>
             {/* <ChatRouter/>  */}
           </Content>
