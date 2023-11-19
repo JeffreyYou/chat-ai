@@ -1,25 +1,40 @@
 import styled from "styled-components";
 
-export const ChatWrapper = styled.div`
-    display: flex;
-    width: 100%; 
-    flex-direction: column;
-`
 export const SystemContainer = styled.div`
     display: flex;
     flex-direction: row;
-    width: 100%;
-    align-items: flex-start;
+
 `
 
 export const UserContainer = styled.div`
     display: flex;
     flex-direction: row-reverse;
-    width: 100%;
-    align-items: flex-end;
     
+`
+export const SystemMessage = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+
+`
+export const UserMessage = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    .header {
+        /* display: flex; */
+        flex-direction: row-reverse;
+
+    }
+
 `
 export const MessageHeader = styled.div`
     display: flex;
+    /* flex-direction: column; */
+
+`
+export const MessageHeaderEdit = styled.div`
+    display: flex;
+
 `
 
